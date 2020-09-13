@@ -19,7 +19,8 @@ class DaftarNilaiKuisionerController extends Controller
 
     public function index()
     {
-        return view('arif.daftar_nilai_kuisioner.daftar');
+        $data                   =           DaftarNilaiKuisionerModel::all();
+        return view('arif.daftar_nilai_kuisioner.daftar',compact('data'));
     }
 
     /**
@@ -29,7 +30,7 @@ class DaftarNilaiKuisionerController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -44,8 +45,13 @@ class DaftarNilaiKuisionerController extends Controller
         $find_user                     =       DB::table('users')->where('id', $request->id_dosen)->first();
         $simpan_kuisioner->nama        =       $find_user->name;
         $simpan_kuisioner->kuisioner   =       $request->kuisioner;
-        $simpan_kuisioner->mata_kuliah =       "-";
-        $simpan_kuisioner->semester    =       "-";
+        if ($find_user->level == 'mahasiswa') {
+            $simpan_kuisioner->mata_kuliah =       $request->mata_kuliah;
+            $simpan_kuisioner->semester    =       $request->semester;
+        }  else {
+            $simpan_kuisioner->mata_kuliah =       "-";
+            $simpan_kuisioner->semester    =       "-";
+        }
         $simpan_kuisioner->nilai       =       $request->nilai;
         $simpan_kuisioner->id_dosen    =       $find_user->id;
         $simpan_kuisioner->save();

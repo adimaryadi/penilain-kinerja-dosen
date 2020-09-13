@@ -112,7 +112,7 @@ class PenilaianController extends Controller
     }
 
     public function KuisionerAtasan() {
-        $atasan            =        DB::table('users')->where('level','atasan');
+        $atasan            =        DB::table('users')->where('level','atasan')->get();
         return view('arif.Kuisioner.atasan',compact('atasan'));
     }
 }

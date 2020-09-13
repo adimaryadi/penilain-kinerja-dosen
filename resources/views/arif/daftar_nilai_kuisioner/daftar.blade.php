@@ -17,6 +17,22 @@
                             <th>Nilai</th>
                         </tr>
                     </thead>
+
+                    <tbody>
+                        @if (!empty($data))
+                            <?php $no   =     1; ?>
+                            @foreach ($data as $item)
+                                <tr>
+                                    <td>{{ $no++ }}</td>
+                                    <td>{{ $item->nama }}</td>
+                                    <td>{{ $item->kuisioner }}</td>
+                                    <td>{{ $item->mata_kuliah }}</td>
+                                    <td>{{ $item->semester }}</td>
+                                    <td>{{ $item->nilai }}</td>
+                                </tr>
+                            @endforeach
+                        @endif
+                    </tbody>
                 </table>
             </div>
         </div>
