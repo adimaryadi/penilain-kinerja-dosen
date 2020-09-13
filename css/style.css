@@ -1,0 +1,225 @@
+.pilihan {
+    position: relative;
+}
+
+.pilihan i {
+    font-size: 1.9em;
+    cursor: pointer;
+    color: #337ab7;
+    margin-right: 9px;
+}
+
+.pilihan .fa-eraser {
+    color: tomato;
+}
+
+.preview-profil {
+    position: relative;
+    border: 1px solid;
+    border-radius: 606px;
+    overflow: hidden;
+    width: 108px;
+    height: 107px;
+    display: none;
+}
+
+.biodata tbody tr td {
+    padding-right: 43px;
+    padding-top: 9px;
+}
+
+.biodata {
+    margin-top: 36px;
+    margin-left: 38px;
+}
+
+.img-foto {
+    position: relative;
+    padding: 13px;
+    overflow: hidden;
+    border: 1px solid #d2d6de;
+    margin: 37px;
+    width: 227px;
+}
+
+.preview-profil img {
+    width: 100%;
+}
+
+.add-data {
+    position: absolute;
+    right: 20px;
+    top: 11px;
+}
+
+.gallery-upload {
+    position: relative;
+    margin: auto;
+    width: 54%;
+}
+
+.ganti img {
+    width: 100%;
+}
+
+.gallery-upload img {
+    display: inline-table;
+    margin: 5px;
+}
+
+.delete-perkategori {
+    position: absolute;
+    width: 26%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: auto;
+    top: 11px;
+}
+
+.preview-images img {
+    width: 100%;
+}
+
+.preview-images {
+    position: relative;
+}
+
+.preview-universitas {
+    position: relative;
+}
+
+.preview-universitas img {
+    width: 14%;
+    margin-right: 17px;
+}
+
+.gambar-slider {
+    position: relative;
+    margin: auto;
+    width: 23%;
+}
+
+.gambar-slider img {
+    width: 100%;
+}
+
+.logo-universitas {
+    position: relative;
+}
+
+.logo-universitas img {
+    width: 28%;
+}
+
+.position-alert {
+    position: absolute;
+    top: 105px;
+    right: 41px;
+}
+
+.section_add_slider_home .preview-sliders {
+    position: relative;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.foto-siswa {
+    position: relative;
+    margin: auto;
+    width: 54%;
+}
+
+.foto-siswa img {
+    width: 100%;
+}
+
+.preview-profil-guru-terbaik {
+    position: relative;
+    width: 168px;
+    height: 163px;
+    margin: auto;
+    border-radius: 1055px;
+    overflow: hidden;
+}
+
+.preview-profil-guru-terbaik img {
+    width: 100%;
+}
+
+.upload_gambar {
+    position: relative;
+    width: 32%;
+    margin: auto;
+    top: 121px;
+}
+
+.daftar_sliders img {
+    width: 100%;
+}
+
+.daftar_sliders {
+    position: relative;
+    width: 56%;
+    margin: auto;
+}
+
+.loading-bar {
+    position: absolute;
+    z-index: 10006;
+    top: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
+    margin: auto;
+    height: 100%;
+    background-color: #3c8dbc;
+    display: none;
+}
+
+.loader {
+    position: relative;
+    margin: auto;
+    top: 242px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    /* Safari */
+    animation: spin 1s linear infinite;
+}
+
+.upload-data {
+    position: absolute;
+    top: 9px;
+    width: 247px;
+    margin: auto;
+    z-index: 10;
+    left: 0;
+    right: 0;
+}
+
+
+/* Safari */
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
