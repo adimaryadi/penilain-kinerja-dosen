@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\PenilaianModel;
+use App\ElementPenilaianModel;
 class PenilaianController extends Controller
 {
     /**
@@ -114,5 +115,10 @@ class PenilaianController extends Controller
     public function KuisionerAtasan() {
         $atasan            =        DB::table('users')->where('level','atasan')->get();
         return view('arif.Kuisioner.atasan',compact('atasan'));
+    }
+
+    public function ElementPenilaian() {
+        $element_penilaian               =            ElementPenilaianModel::all();
+        return view('arif.ranking.element_penilaian',compact('element_penilaian'));
     }
 }

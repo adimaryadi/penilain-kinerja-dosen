@@ -32,3 +32,4 @@ Route::get('kuisioner_mahasiswa','PenilaianController@KuisionerMahasiswa');
 Route::get('kuisioner_dosen','PenilaianController@KuisionerDosen');
 Route::get('kuisioner_atasan','PenilaianController@KuisionerAtasan');
 Route::resource('perankingan','PerankinganController');
+Route::get('element_penilaian','PenilaianController@ElementPenilaian');

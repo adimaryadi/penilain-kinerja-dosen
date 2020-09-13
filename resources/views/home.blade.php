@@ -264,6 +264,7 @@
             </a>
             <ul class="treeview-menu">
                 <li><a href="{{ url('riwayat_penelitian') }}"><i class="fa fa-list-alt"></i> Report </a></li>
+                <li><a href="{{ url('element_penilaian') }}"><i class="fa fa-list-alt"></i> Element Penilaian</a></li>
             </ul>
           </li>                                                                
           <li class="treeview">
@@ -400,6 +401,7 @@
             @yield('penilaian_kuisioner')
             @yield('add_perangkingan')
             @yield('atasan')
+            @yield('element_penilaian')
           <!-- end section daftar penguna -->
         <?php } else if (Auth::user()->level == 'mahasiswa') { ?>
             @yield('kuisioner')
@@ -489,7 +491,7 @@
             'paging'      : true,
             'lengthChange': true,
             'searching'   : true,
-            'ordering'    : true,
+            'ordering'    : false,
             'info'        : true,
             'autoWidth'   : true
           });

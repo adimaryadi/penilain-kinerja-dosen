@@ -20,6 +20,10 @@ class DaftarNilaiKuisionerController extends Controller
     public function index()
     {
         $data                   =           DaftarNilaiKuisionerModel::all();
+        $group_data             =           DaftarNilaiKuisionerModel::groupBy('id_dosen')->having(DB::raw('count(*)'), ">","1")->select('id_dosen')->get();
+        foreach ($group_data as $item) {
+            
+        }
         return view('arif.daftar_nilai_kuisioner.daftar',compact('data'));
     }
 

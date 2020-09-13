@@ -20,7 +20,8 @@
 
                     <tbody>
                         @if (!empty($data))
-                            <?php $no   =     1; ?>
+                            <?php $no          =     1; ?>
+                            <?php $data_push   =     []; ?>
                             @foreach ($data as $item)
                                 <tr>
                                     <td>{{ $no++ }}</td>
@@ -28,7 +29,9 @@
                                     <td>{{ $item->kuisioner }}</td>
                                     <td>{{ $item->mata_kuliah }}</td>
                                     <td>{{ $item->semester }}</td>
-                                    <td>{{ $item->nilai }}</td>
+                                    <td>
+                                                                     
+                                    </td>
                                 </tr>
                             @endforeach
                         @endif
