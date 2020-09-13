@@ -110,4 +110,9 @@ class PenilaianController extends Controller
         $dosen             =        DB::table('users')->where('level', 'dosen')->get();
         return view('arif.Kuisioner.dosen',compact('dosen'));
     }
+
+    public function KuisionerAtasan() {
+        $atasan            =        DB::table('users')->where('level','atasan');
+        return view('arif.Kuisioner.atasan',compact('atasan'));
+    }
 }

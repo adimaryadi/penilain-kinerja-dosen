@@ -30,4 +30,5 @@ Route::resource('penghargaan','PenghargaanController');
 Route::resource('daftar_nilai_kuisioner','DaftarNilaiKuisionerController');
 Route::get('kuisioner_mahasiswa','PenilaianController@KuisionerMahasiswa');
 Route::get('kuisioner_dosen','PenilaianController@KuisionerDosen');
+Route::get('kuisioner_atasan','PenilaianController@KuisionerAtasan');
 Route::resource('perankingan','PerankinganController');

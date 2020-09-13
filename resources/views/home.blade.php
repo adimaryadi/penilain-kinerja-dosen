@@ -241,7 +241,7 @@
               <li><a href="{{ url('perankingan') }}"><i class="fa fa-list-alt"></i> Perangkingan </a></li>
                 <li><a href="{{ url('kuisioner_mahasiswa') }}"><i class="fa fa-list-alt"></i> Kuisioner Mahasiswa </a></li>
                 <li><a href="{{ url('kuisioner_dosen') }}"><i class="fa fa-list-alt"></i> Kuisioner Dosen </a></li>
-                <li><a href="{{ url('kuisioner_mahasiswa') }}"><i class="fa fa-list-alt"></i> Kuisioner Atasan </a></li>
+                <li><a href="{{ url('kuisioner_atasan') }}"><i class="fa fa-list-alt"></i> Kuisioner Atasan </a></li>
             </ul>
           </li>                                                                
           <li class="treeview ">
@@ -500,4 +500,6 @@
   
         var url       =     '{{ url('') }}';
         var token     =     '{{ csrf_token('') }}';
-      
+      </script> 
+</body>
+</html>

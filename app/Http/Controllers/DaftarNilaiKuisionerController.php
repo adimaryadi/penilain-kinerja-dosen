@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\DaftarNilaiKuisionerModel;
+use Illuminate\Support\Facades\DB;
 class DaftarNilaiKuisionerController extends Controller
 {
     /**
@@ -39,7 +40,16 @@ class DaftarNilaiKuisionerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $simpan_kuisioner              =       new DaftarNilaiKuisionerModel();
+        $find_user                     =       DB::table('users')->where('id', $request->id_dosen)->first();
+        $simpan_kuisioner->nama        =       $find_user->name;
+        $simpan_kuisioner->kuisioner   =       $request->kuisioner;
+        $simpan_kuisioner->mata_kuliah =       "-";
+        $simpan_kuisioner->semester    =       "-";
+        $simpan_kuisioner->nilai       =       $request->nilai;
+        $simpan_kuisioner->id_dosen    =       $find_user->id;
+        $simpan_kuisioner->save();
+        return redirect('daftar_nilai_kuisioner')->with('pesan','Penilaian '.$find_user->name. ' Disimpan');
     }
 
     /**
